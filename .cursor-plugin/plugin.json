@@ -1,0 +1,19 @@
+{
+  "name": "luch",
+  "version": "0.1.6",
+  "description": "Connect Cursor agents to explicitly authorized LUCH browser, file, and device tools through a scoped OAuth MCP server. Service access is currently limited to enabled accounts.",
+  "author": {
+    "name": "Lenar Salimov"
+  },
+  "homepage": "https://luch.lenarsalimov.ru/",
+  "repository": "https://github.com/lenar2/luch-cursor",
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "oauth",
+    "agent-tools",
+    "browser",
+    "authorized-devices"
+  ],
+  "logo": "assets/logo-draft-text-only.png"
+}
