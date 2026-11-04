@@ -1,5 +1,7 @@
 # LUCH for Cursor — v0.1.6
 
+**LUCH is an independent platform, not a Cursor-only product.** Discover its capabilities and all AI clients at the [LUCH product hub](https://github.com/lenar2/luch) or [global website](https://luch.lenarsalimov.ru/). This repository contains only the Cursor adapter.
+
 LUCH is a Cursor Plugin with 12 permission-aware skills and one HTTPS Streamable HTTP MCP server. It helps an authorized agent work with explicitly linked browsers, files, services, and devices.
 
 ## Availability
