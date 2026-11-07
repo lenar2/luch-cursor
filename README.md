@@ -3,7 +3,7 @@
 # LUCH for Cursor
 ### Take the task beyond the editor — and bring the evidence back.
 
-Cursor helps you understand and change code. **LUCH connects that coding work to the selected environment around it**: permitted files, a browser session and the exact test server you choose. The aim is a diagnosis and a reviewable change, not a blind release.
+I brought LUCH to Cursor so coding work can reach the environment around it. **LUCH connects that work to the resources you select**: permitted files, a browser session and the exact test server you choose. The aim is a diagnosis and a reviewable change, not a blind release.
 
 [**See the Cursor workflow**](docs/CURSOR_WORKFLOW.md) · [**Install in Cursor**](#connect-in-cursor) · [Русский](README.ru.md) · [LUCH platform](https://github.com/lenar2/luch)
 
