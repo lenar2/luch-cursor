@@ -1,57 +1,66 @@
-<p><img src="https://raw.githubusercontent.com/lenar2/luch/main/website/assets/luch-ray.svg" alt="" width="36"></p>
+<p><img src="https://raw.githubusercontent.com/lenar2/luch/main/website/assets/luch-ray.svg" width="38" alt="LUCH"></p>
 
 # LUCH for Cursor
-### When the next step lives outside the editor.
+### Take the task beyond the editor — and bring the evidence back.
 
-Cursor helps you reason about code. With **an enabled LUCH account and explicit grants**, it can also reach a selected browser, permitted file or server to inspect the situation — then bring an actual result back into your work.
+Cursor helps you understand and change code. **LUCH connects that coding work to the selected environment around it**: permitted files, a browser session and the exact test server you choose. The aim is a diagnosis and a reviewable change, not a blind release.
 
-[**A real LUCH outcome**](https://github.com/lenar2/luch/blob/main/docs/REAL_WORK.md) · [**Install in Cursor**](#connect-in-cursor) · [Русский](README.ru.md) · [LUCH home](https://github.com/lenar2/luch)
+[**See the Cursor workflow**](docs/CURSOR_WORKFLOW.md) · [**Install in Cursor**](#connect-in-cursor) · [Русский](README.ru.md) · [LUCH platform](https://github.com/lenar2/luch)
 
-> **Access is limited:** public source is available, but a fresh Cursor user's OAuth sign-in, end-to-end access and cross-tenant isolation have not been independently verified. Installing the plugin never pairs a machine or enrolls an account.
+![Cursor workflow: issue, selected repository and test server, reviewable patch](assets/cursor-workflow.svg)
 
-## An actual problem, investigated and changed
+## A Cursor workflow: from bug report to reviewable patch
 
-The founder said that LUCH's website spoke to engineers rather than people and required the Mac to stay untouched. The assistant inspected the live site and source, prepared a revision, tested pages and released the authorized change. Here is the [exact commit](https://github.com/lenar2/luch/commit/06daa8d6b89a3dfd65e74628b895879e79a0c931) and the [record of checks](https://github.com/lenar2/ai-factory-evidence/issues/4009#issuecomment-6692683064).
+A bug report says that a page fails after a recent change. Instead of guessing from the code alone:
 
-**This is evidence of LUCH with authorized server and GitHub tools in the founder's environment — not a claim that Cursor executed the case.** The [creative audit](https://github.com/lenar2/ai-factory-evidence/issues/4009#issuecomment-6705944671) found that the design still needed work.
+1. Ask Cursor to inspect the exact repository and issue you selected.
+2. If you have paired a test server, ask LUCH for its current status and bounded diagnostic output.
+3. Compare the observed environment with the code and identify the likely cause.
+4. Prepare a minimal patch and run only the checks you approve.
+5. Review the diff and test result. Decide separately whether to merge or deploy.
 
-## What Cursor and LUCH could do together
+**What comes back:** the evidence behind the diagnosis, a proposed code change and the checks that were actually run. The release decision stays with you.
 
-| Your goal | Permitted operation | Result to inspect |
-| --- | --- | --- |
-| “Why did this site break?” | Read a permitted website and compare approved source | An explanation with links |
-| “Does my server actually respond?” | Run a bounded command on the server you selected | Observed diagnostic output |
-| “Prepare the fix, but don't release it.” | Read authorized files or repository context | A reviewable change, **not** deployment |
+[**Open the debugging workflow →**](docs/CURSOR_WORKFLOW.md)
 
-These are possible tasks; capability and permission scopes vary by account and device.
+## What LUCH adds to Cursor
+
+| Cursor's working context | LUCH extends it with |
+| --- | --- |
+| Repository and code | Read or edit the files you selected, with a clear change boundary |
+| Browser and running page | Inspect a permitted public page in an isolated server-browser session |
+| Test environment | Check the exact paired server and run bounded diagnostic commands when exposed |
+| Multi-step fix | Preserve the original, prepare a reviewable change and verify the result |
+
+The plugin includes 12 skills for browser, files, computer, server, control, safety and multi-step workflows. The current Cursor session determines which tools and permissions are actually available.
 
 ## Connect in Cursor
 
-**1 · Check access first.** [Service status](https://luch.lenarsalimov.ru/en/status/). The hosted Core currently operates for enabled test/reviewer accounts. A public client is not a self-service signup.
-
-**2 · Install the local plugin** (in a supported Cursor version).
+1. Install the local plugin in a supported Cursor version:
 
 ```bash
 mkdir -p ~/.cursor/plugins/local
 git clone https://github.com/lenar2/luch-cursor.git ~/.cursor/plugins/local/luch
-# If already installed, update that existing checkout instead of cloning again.
+# If already installed, update that checkout instead of cloning again.
 ```
 
-Reload Cursor, open **Customize → Plugins**, and confirm the LUCH MCP server and the 12 included skills are detected.
+2. Reload Cursor. Open **Customize → Plugins** and confirm that LUCH and its skills are detected.
+3. Complete the supported OAuth flow with your own enabled LUCH account.
+4. Start with an inspection-only request: *“Check the status of the test server I selected. Do not run changes.”*
 
-**3 · Authorize only if enabled.** Use Cursor's host-supported OAuth flow for the protected LUCH MCP endpoint. Verify available tools. Never enter passwords or access tokens in chat.
+[Plugin manifest](.cursor-plugin/plugin.json) · [MCP configuration](mcp.json) · [Technical setup](https://luch.lenarsalimov.ru/docs/get-started/)
 
-**4 · Start read-only.** For example, “Find which of my authorized devices are available.” Inspect the actual result before asking it to make a change.
+## Your code. Your environment. Your release decision.
 
-If your account is not enabled, stop here; do not borrow credentials or connect to the founder's devices.
+LUCH can help Cursor move from a code suggestion to work grounded in the selected environment. You choose the repository, server and permission scope. A proposed patch is not a deployment.
 
-<details><summary>Developer and reviewer details</summary>
+The public plugin source is available to inspect. Service access and device pairing depend on your account and host. See [service status](https://luch.lenarsalimov.ru/en/status/) or [support](https://luch.lenarsalimov.ru/support/).
 
-- Cursor Plugin manifest: [`.cursor-plugin/plugin.json`](.cursor-plugin/plugin.json); public MCP configuration: [`mcp.json`](mcp.json); twelve permission-aware skills: [`skills/`](skills/).
-- HTTPS endpoint `https://api.lenarsalimov.ru/luch/core/mcp`; protected OAuth access required.
-- A proper new-tenant acceptance test includes OAuth sign-in, authorized demo-device discovery, a synthetic file read, explicitly approved demo-device rename, forbidden-path denial and revocation. These tests are **not** claimed as passed for independent new Cursor users.
-- The repository provides client source only, not the hosted backend, private accounts, device secrets or access to third-party machines.
+<details><summary>For developers and reviewers</summary>
 
-[Security](SECURITY.md) · [Apache-2.0](LICENSE) · [Support](https://luch.lenarsalimov.ru/support/) · [Privacy](https://luch.lenarsalimov.ru/privacy/)
+- Cursor plugin version: v0.1.6; 12 skills.
+- Manifest: [`.cursor-plugin/plugin.json`](.cursor-plugin/plugin.json); remote MCP: [`mcp.json`](mcp.json).
+- A full acceptance run for a new tenant requires OAuth, an authorized test device, a read-only test, a forbidden-path denial and revocation. This README does not claim those tests passed for an independent new user.
+- [Security](SECURITY.md) · [Apache-2.0](LICENSE).
 
 </details>

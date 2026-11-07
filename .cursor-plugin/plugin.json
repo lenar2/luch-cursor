@@ -1,7 +1,7 @@
 {
   "name": "luch",
   "version": "0.1.6",
-  "description": "Connect Cursor agents to explicitly authorized LUCH browser, file, and device tools through a scoped OAuth MCP server. Service access is currently limited to enabled accounts.",
+  "description": "Take a code task beyond the editor: inspect selected web pages and files, check a paired test server and bring back a reviewable finding or patch.",
   "author": {
     "name": "Lenar Salimov"
   },
