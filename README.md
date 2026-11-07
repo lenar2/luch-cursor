@@ -34,6 +34,14 @@ A bug report says that a page fails after a recent change. Instead of guessing f
 
 The plugin includes 12 skills for browser, files, computer, server, control, safety and multi-step workflows. The current Cursor session determines which tools and permissions are actually available.
 
+## The full LUCH behind my Cursor integration
+
+The development workflow is only one part of what I am building. LUCH also describes **isolated browser work, local tabs, file operations, connected desktops, server diagnostics, supported services and coordinated tasks**, with capability discovery, routing and safety.
+
+[**All 12 LUCH capabilities →**](https://github.com/lenar2/luch/blob/main/docs/CAPABILITIES.md)
+
+Cursor can call only the tools exposed by its current integration and grants; the wider platform is not silently enabled by installing the plugin.
+
 ## Connect in Cursor
 
 1. Install the local plugin in a supported Cursor version:
