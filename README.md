@@ -5,7 +5,7 @@
 
 Cursor helps you reason about code. With **an enabled LUCH account and explicit grants**, it can also reach a selected browser, permitted file or server to inspect the situation — then bring an actual result back into your work.
 
-[**A real LUCH outcome**](https://github.com/lenar2/luch/blob/design/hea-evidence-first-20261107/docs/REAL_WORK.md) · [**Install in Cursor**](#connect-in-cursor) · [Русский](README.ru.md) · [LUCH home](https://github.com/lenar2/luch)
+[**A real LUCH outcome**](https://github.com/lenar2/luch/blob/main/docs/REAL_WORK.md) · [**Install in Cursor**](#connect-in-cursor) · [Русский](README.ru.md) · [LUCH home](https://github.com/lenar2/luch)
 
 > **Access is limited:** public source is available, but a fresh Cursor user's OAuth sign-in, end-to-end access and cross-tenant isolation have not been independently verified. Installing the plugin never pairs a machine or enrolls an account.
 
@@ -32,9 +32,9 @@ These are possible tasks; capability and permission scopes vary by account and d
 **2 · Install the local plugin** (in a supported Cursor version).
 
 ```bash
-git clone https://github.com/lenar2/luch-cursor.git
-# Copy this repository's plugin into ~/.cursor/plugins/local/luch
-# Keep .cursor-plugin/plugin.json, skills/ and mcp.json intact.
+mkdir -p ~/.cursor/plugins/local
+git clone https://github.com/lenar2/luch-cursor.git ~/.cursor/plugins/local/luch
+# If already installed, update that existing checkout instead of cloning again.
 ```
 
 Reload Cursor, open **Customize → Plugins**, and confirm the LUCH MCP server and the 12 included skills are detected.

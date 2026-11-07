@@ -5,7 +5,7 @@
 
 Cursor помогает работать с кодом. **LUCH — при включённом аккаунте и явном разрешении — помогает обратиться к выбранному сайту, файлу или серверу** и вернуться с наблюдением, которое можно проверить.
 
-[**Настоящая работа LUCH**](https://github.com/lenar2/luch/blob/design/hea-evidence-first-20261107/docs/REAL_WORK.ru.md) · [**Подключение**](#подключение-к-cursor) · [English](README.md) · [Главный LUCH](https://github.com/lenar2/luch)
+[**Настоящая работа LUCH**](https://github.com/lenar2/luch/blob/main/docs/REAL_WORK.ru.md) · [**Подключение**](#подключение-к-cursor) · [English](README.md) · [Главный LUCH](https://github.com/lenar2/luch)
 
 > **Доступ ограничен:** исходный код открыт, но независимый вход нового Cursor-пользователя через OAuth, полный пользовательский сценарий и изоляция разных аккаунтов не подтверждены. Установка не создаёт аккаунт и не подключает устройства.
 
@@ -32,9 +32,9 @@ Cursor помогает работать с кодом. **LUCH — при вкл
 **2 · Установите локальный плагин** в поддерживаемом Cursor:
 
 ```bash
-git clone https://github.com/lenar2/luch-cursor.git
-# Поместите репозиторий в ~/.cursor/plugins/local/luch
-# Сохраните .cursor-plugin/plugin.json, skills/ и mcp.json.
+mkdir -p ~/.cursor/plugins/local
+git clone https://github.com/lenar2/luch-cursor.git ~/.cursor/plugins/local/luch
+# Если каталог уже существует, обновите его, а не клонируйте повторно.
 ```
 
 Перезапустите Cursor, откройте **Customize → Plugins** и проверьте, что доступны LUCH MCP и 12 навыков.
@@ -47,7 +47,7 @@ git clone https://github.com/lenar2/luch-cursor.git
 
 <details><summary>Технические сведения</summary>
 
-[` .cursor-plugin/plugin.json`](.cursor-plugin/plugin.json) · [`mcp.json`](mcp.json) · [`skills/`](skills/). Защищённый адрес MCP: `https://api.lenarsalimov.ru/luch/core/mcp`. Новый независимый E2E должен проверять OAuth, разрешённый тестовый файл и устройство, запрет чужих ресурсов и отзыв доступа. Это **ещё не отмечено как PASS**. В репозитории только публичный клиент, не закрытый сервер и не чужие ключи.
+[`.cursor-plugin/plugin.json`](.cursor-plugin/plugin.json) · [`mcp.json`](mcp.json) · [`skills/`](skills/). Защищённый адрес MCP: `https://api.lenarsalimov.ru/luch/core/mcp`. Новый независимый E2E должен проверять OAuth, разрешённый тестовый файл и устройство, запрет чужих ресурсов и отзыв доступа. Это **ещё не отмечено как PASS**. В репозитории только публичный клиент, не закрытый сервер и не чужие ключи.
 
 [Безопасность](SECURITY.md) · [Лицензия](LICENSE) · [Поддержка](https://luch.lenarsalimov.ru/support/)
 
