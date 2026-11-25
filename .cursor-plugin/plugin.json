@@ -1,6 +1,6 @@
 {
   "name": "luch",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Take a code task beyond the editor: inspect selected web pages and files, check a paired test server and bring back a reviewable finding or patch.",
   "author": {
     "name": "Lenar Salimov"
